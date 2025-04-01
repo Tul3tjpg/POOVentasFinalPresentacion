@@ -1,20 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace POOVentasFinal
+﻿namespace POOVentasFinal
 {
     public partial class FrmVenta : Form
     {
-        public FrmVenta()
+        List<ConceptoVenta> conceptos;
+        public FrmVenta(string tipoVenta)
         {
             InitializeComponent();
+            List<ConceptoVenta> conceptos = new List<ConceptoVenta>();
+
+            if (tipoVenta == "credito")
+            {
+                this.Text = "Venta de Credito";
+            }
+            else
+            {
+                this.Text = "Venta de Contado";
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            DgvConceptos.DataSource = null;
+
+            ConceptoVenta concepto = new ConceptoVenta();
+            concepto.Cantidad = Convert.ToInt32(TxtCantidad.Text);
+            concepto.Descripcion = TxtDescripcion.Text;
+            concepto.ValorUnitario = Convert.ToDecimal(TxtValorUnitario.Text);
+            conceptos.Add(concepto);
+
+            DgvConceptos.DataSource = conceptos;
         }
     }
 }

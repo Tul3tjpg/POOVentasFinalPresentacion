@@ -34,18 +34,21 @@
             // 
             // BtnVentaCredito
             // 
-            BtnVentaCredito.Location = new Point(474, 241);
+            BtnVentaCredito.Location = new Point(592, 301);
+            BtnVentaCredito.Margin = new Padding(4, 4, 4, 4);
             BtnVentaCredito.Name = "BtnVentaCredito";
-            BtnVentaCredito.Size = new Size(124, 29);
+            BtnVentaCredito.Size = new Size(155, 36);
             BtnVentaCredito.TabIndex = 0;
             BtnVentaCredito.Text = "Venta Credito";
             BtnVentaCredito.UseVisualStyleBackColor = true;
+            BtnVentaCredito.Click += BtnVentaCredito_Click;
             // 
             // BtnVentaContado
             // 
-            BtnVentaContado.Location = new Point(159, 241);
+            BtnVentaContado.Location = new Point(199, 301);
+            BtnVentaContado.Margin = new Padding(4, 4, 4, 4);
             BtnVentaContado.Name = "BtnVentaContado";
-            BtnVentaContado.Size = new Size(118, 29);
+            BtnVentaContado.Size = new Size(148, 36);
             BtnVentaContado.TabIndex = 0;
             BtnVentaContado.Text = "Venta Contado";
             BtnVentaContado.UseVisualStyleBackColor = true;
@@ -53,11 +56,12 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1000, 562);
             Controls.Add(BtnVentaContado);
             Controls.Add(BtnVentaCredito);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);

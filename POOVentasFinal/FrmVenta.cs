@@ -36,10 +36,16 @@
             _venta.Conceptos.Add(concepto);
 
             DgvConceptos.DataSource = _venta.Conceptos;
+            TxtTotal.Text = _venta.Total.ToString();
 
             TxtCantidad.Text = string.Empty;
-            TxtDescripcion.Text = string.Empty; 
+            TxtDescripcion.Text = string.Empty;
             TxtValorUnitario.Text = string.Empty;
+        }
+
+        private void TxtTotal_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

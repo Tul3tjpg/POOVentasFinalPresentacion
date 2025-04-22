@@ -28,30 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             BtnVentaCredito = new Button();
             BtnVentaContado = new Button();
             SuspendLayout();
             // 
             // BtnVentaCredito
             // 
-            BtnVentaCredito.Location = new Point(592, 301);
-            BtnVentaCredito.Margin = new Padding(4, 4, 4, 4);
+            BtnVentaCredito.BackColor = SystemColors.Menu;
+            BtnVentaCredito.Image = (Image)resources.GetObject("BtnVentaCredito.Image");
+            BtnVentaCredito.Location = new Point(549, 172);
+            BtnVentaCredito.Margin = new Padding(4);
             BtnVentaCredito.Name = "BtnVentaCredito";
-            BtnVentaCredito.Size = new Size(155, 36);
+            BtnVentaCredito.Size = new Size(218, 205);
             BtnVentaCredito.TabIndex = 0;
-            BtnVentaCredito.Text = "Venta Credito";
-            BtnVentaCredito.UseVisualStyleBackColor = true;
+            BtnVentaCredito.UseVisualStyleBackColor = false;
             BtnVentaCredito.Click += BtnVentaCredito_Click;
             // 
             // BtnVentaContado
             // 
-            BtnVentaContado.Location = new Point(199, 301);
-            BtnVentaContado.Margin = new Padding(4, 4, 4, 4);
+            BtnVentaContado.BackColor = SystemColors.Menu;
+            BtnVentaContado.Image = (Image)resources.GetObject("BtnVentaContado.Image");
+            BtnVentaContado.Location = new Point(205, 172);
+            BtnVentaContado.Margin = new Padding(4);
             BtnVentaContado.Name = "BtnVentaContado";
-            BtnVentaContado.Size = new Size(148, 36);
+            BtnVentaContado.Size = new Size(223, 205);
             BtnVentaContado.TabIndex = 0;
-            BtnVentaContado.Text = "Venta Contado";
-            BtnVentaContado.UseVisualStyleBackColor = true;
+            BtnVentaContado.UseVisualStyleBackColor = false;
             BtnVentaContado.Click += BtnVentaContado_Click;
             // 
             // Form1
@@ -61,7 +64,7 @@
             ClientSize = new Size(1000, 562);
             Controls.Add(BtnVentaContado);
             Controls.Add(BtnVentaCredito);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);

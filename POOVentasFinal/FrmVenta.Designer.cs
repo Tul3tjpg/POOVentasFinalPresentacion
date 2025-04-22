@@ -37,6 +37,8 @@
             TxtValorUnitario = new TextBox();
             BtnAgregar = new Button();
             TxtTotal = new TextBox();
+            BtnEfectivo = new Button();
+            BtnTarjeta = new Button();
             ((System.ComponentModel.ISupportInitialize)DgvConceptos).BeginInit();
             SuspendLayout();
             // 
@@ -129,11 +131,33 @@
             TxtTotal.TextAlign = HorizontalAlignment.Right;
             TxtTotal.TextChanged += TxtTotal_TextChanged;
             // 
+            // BtnEfectivo
+            // 
+            BtnEfectivo.Location = new Point(711, 761);
+            BtnEfectivo.Name = "BtnEfectivo";
+            BtnEfectivo.Size = new Size(219, 38);
+            BtnEfectivo.TabIndex = 7;
+            BtnEfectivo.Text = "Efectivo";
+            BtnEfectivo.UseVisualStyleBackColor = true;
+            BtnEfectivo.Click += BtnEfectivo_Click;
+            // 
+            // BtnTarjeta
+            // 
+            BtnTarjeta.Location = new Point(487, 765);
+            BtnTarjeta.Name = "BtnTarjeta";
+            BtnTarjeta.Size = new Size(202, 36);
+            BtnTarjeta.TabIndex = 8;
+            BtnTarjeta.Text = "Tarjeta";
+            BtnTarjeta.UseVisualStyleBackColor = true;
+            BtnTarjeta.Click += BtnTarjeta_Click;
+            // 
             // FrmVenta
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1322, 810);
+            Controls.Add(BtnTarjeta);
+            Controls.Add(BtnEfectivo);
             Controls.Add(TxtTotal);
             Controls.Add(BtnAgregar);
             Controls.Add(DgvConceptos);
@@ -162,5 +186,7 @@
         private TextBox TxtValorUnitario;
         private Button BtnAgregar;
         private TextBox TxtTotal;
+        private Button BtnEfectivo;
+        private Button BtnTarjeta;
     }
 }

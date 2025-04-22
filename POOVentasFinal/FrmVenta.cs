@@ -41,11 +41,29 @@
             TxtCantidad.Text = string.Empty;
             TxtDescripcion.Text = string.Empty;
             TxtValorUnitario.Text = string.Empty;
+            TxtDescripcion.Focus();
         }
 
         private void TxtTotal_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnEfectivo_Click(object sender, EventArgs e)
+        {
+            FormaPagoEfectivo efectivo = new FormaPagoEfectivo();
+            AplicarPago(efectivo);
+        }
+
+        void AplicarPago(IFormaPago formaPago)
+        {
+            formaPago.Cobrar(_venta.Total);
+        }
+
+        private void BtnTarjeta_Click(object sender, EventArgs e)
+        {
+            FormaPagoTarjeta tarjeta = new FormaPagoTarjeta();
+            AplicarPago(tarjeta);
         }
     }
 }
